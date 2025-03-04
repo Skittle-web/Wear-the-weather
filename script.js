@@ -15,13 +15,13 @@ document.getElementById("question").innerText = questions[currentQuestion];
 document.getElementById("next-button").addEventListener("click", () => {
     const answer = parseInt(document.getElementById("answer").value);
 
-    // Проверка на пустое поле ввода
+ 
     if (isNaN(answer)) {
         alert("Пожалуйста, введите число.");
         return;
     }
 
-    // Проверка на корректность ввода для каждого вопроса
+   
     if (currentQuestion === 0 && (answer < -50 || answer > 50)) {
         alert("Пожалуйста, введите корректную температуру (от -50 до 50 градусов).");
         return;
@@ -58,7 +58,7 @@ function displayRecommendations() {
     const clothingList = document.getElementById("clothing-list");
     clothingList.innerHTML = ''; // Очистка предыдущих результатов
 
-    // Рекомендации по одежде
+
     if (temperature < 0) {
         clothingList.innerHTML += "<li>Теплая зимняя куртка</li>";
         clothingList.innerHTML += "<li>Теплые перчатки</li>";
